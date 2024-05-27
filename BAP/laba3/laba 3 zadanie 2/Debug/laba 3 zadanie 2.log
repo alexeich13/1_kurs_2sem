@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\BSTU\1 kurs\1 kurs 2 sem\Основы алгоритмизации и программирования\лаба 3\laba 3 zadanie 2\Source.cpp(11,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\BSTU\1 kurs\1 kurs 2 sem\Основы алгоритмизации и программирования\лаба 3\laba 3 zadanie 2\Source.cpp(27,23): warning C4018: <: несоответствие типов со знаком и без знака
+  laba 3 zadanie 2.vcxproj -> C:\BSTU\1 kurs\1 kurs 2 sem\Основы алгоритмизации и программирования\лаба 3\laba 3 zadanie 2\Debug\laba 3 zadanie 2.exe

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Chess</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style type="text/css">
+.chess{
+width: 400px;
+height: 400px;
+}
+.white{
+width: 50px;
+height: 50px;
+float: left;
+}
+.black{
+background-color: black;
+width: 50px;
+height: 50px;
+float: left;
+}
+.blocks{
+margin: 50px 25px;
+}
+.block{
+display: flex;
+justify-content: center;
+}
+.let{
+width: 20px;
+height: 50px;
+}
+</style>
+</head>
+    <body>
+    <div id="chess"></div>
+    <script type="text/babel">      
+const Chess = () => {
+const letters = ["A", "B", "C", "D", "E", "F", "G", "H"]; // создаем массив из букв
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8]; // создаем массив из цифр 
+let Desk = []; // создаем массив для доски
+let num = 0;
+
+for (let i = 0; i < 8; i++) { // с помощью циклов генерируем доску опираясь на условие в if 
+for (let j = 0; j < 8; j++) {
+
+if (num % 2 === 0) {
+
+Desk.push(<div className='black'></div>) // добавляем в массив клетки черного цвета
+}
+else {
+Desk.push(<div className='white'></div>) // добавляем в массив клетки белого цвета
+}
+num++;
+}
+num++;
+}
+
+let arr_letters =
+letters.map((index) => {
+return <div className='white'>{index}</div> // создаем элемент, который будет выводить буквы по порядку
+});
+let arr_numbers =
+numbers.map((index) => {
+return <div className='let'>{index}</div> // создаем элемент, который будет выводить цифры по порядку
+});
+
+Desk.push(arr_letters) // добавляем внизу буквы в массив Desk 
+Desk.unshift(arr_letters) // добавляем вверху буквы в массив Desk 
+return ( // возвращаем представление нашей доски выводя цифры, массив доски и снова цифры
+<div className='block'>
+<div className="blocks"> {arr_numbers}</div>
+<div className='chess'> {Desk}</div>
+<div className="blocks"> {arr_numbers}</div>
+</div>
+);
+}
+ReactDOM.render(
+            <Chess/>,
+            document.getElementById('chess')
+        );
+ </script>
+</body>
+</html>

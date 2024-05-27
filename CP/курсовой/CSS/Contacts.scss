@@ -1,0 +1,456 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("Fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Smythe";
+  src: url("Fonts/Smythe/Smythe-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #341f1f;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header {
+  background: black;
+  .wrapper {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo {
+      img {
+        height: 80px;
+      }
+    }
+    .burger {
+      display: none;
+      .container_burger {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
+    .header_time {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+
+      text-align: center;
+      color: #fbf8f8;
+    }
+    .header__nav {
+      .nav_header {
+        ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .active_pages {
+            padding-bottom: 8px;
+            border-bottom: 4px solid #a34b4b;
+          }
+          li {
+            cursor: pointer;
+
+            padding: 10px 20px;
+            &:hover {
+              background-color: #a34b4b;
+            }
+            a { padding: 10px 20px;
+              font-family: "Smythe";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              height: 100%;
+              line-height: 37px;
+              text-align: center;
+              color: #fbf8f8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.service_title {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 75px;
+  text-align: center;
+  color: #a34b4b;
+}
+.about_company {
+  margin-top: 20px;
+  .wrapper {
+    max-width: 1000px;
+  }
+  .company_info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .company_title {
+    font-family: "Smythe";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+
+    text-align: center;
+    color: #a34b4b;
+  }
+  .info_first {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 30px;
+    .info_first_text {
+      p {
+        font-family: "Smythe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        text-align: justify;
+
+        color: #c0b3b3;
+      }
+    }
+    .info_first_img {
+      background-color: #a34b4b;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.services {
+  margin-top: 30px;
+  .title_services {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    text-align: center;
+    color: #a34b4b;
+  }
+  .services_blocks {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    .service_block {
+      width: 300px;
+      h2 {
+        font-weight: 500;
+        font-size: 25px;
+
+        text-align: center;
+
+        color: #c7bebe;
+      }
+      .services_block_img {
+        width: 300px;
+        height: 300px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.form_title {
+  margin-top: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
+  color: #a34b4b;
+}
+.form_title_more {
+  margin-top: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #bd8888;
+}
+.form {
+  margin-top: 40px;
+  .main_form {
+    margin: 0 auto;
+    padding: 30px 20px;
+    label {
+      padding: 10px 0;
+      display: block;
+    }
+    button {
+      height: 50px;
+      background: #c4c4c4;
+      padding: 10px 20px;
+      border: none;
+      color: black;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background: #a34b4b;
+        color: #fbf8f8;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    max-width: 600px;
+
+    background: #d5d4d8;
+  }
+}
+.footer {
+  margin-top: 50px;
+  background-color: black;
+  .wrapper {
+    .contacts_imgs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .copyright {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #fbf8f8;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1034px) {
+  .wrapper {
+    max-width: 800px;
+  }
+  .header .wrapper .header__nav .nav_header ul li a {
+    font-size: 24px;
+  }
+  .header .wrapper .header_time {
+    font-size: 24px;
+  }
+  .about_company {
+    margin-top: 20px;
+    .wrapper {
+      max-width: 800px;
+    }
+  }
+}
+@media (max-width: 790px) {
+  .wrapper {
+    max-width: 650px;
+  }
+  .header {
+    .wrapper {
+      height: 100px;
+      .header__logo {
+        height: 90px;
+        img {
+          width: 90px;
+        }
+      }
+      .burger {
+        display: block;
+        z-index: 100;
+      }
+    }
+
+    position: relative;
+    .header__nav {
+      transform: translateX(-100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 10;
+      background-color: black;
+      transition: 0.5s;
+      &.active {
+        transform: translateX(-0%);
+      }
+      .nav_header {
+        ul {
+          margin-top: 90px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          .active_pages {
+            border: 3px solid #a34b4b;
+            width: 80%;
+            text-align: center;
+          }
+          li {
+            padding: 10px 50px;
+            width: 100%;
+            text-align: center;
+            a {
+              display: block;
+
+              width: 100%;
+              font-family: "Smythe";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 32px;
+              line-height: 37px;
+              text-align: center;
+              color: #fbf8f8;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about_company .company_title {
+    font-size: 44px;
+  }
+  .form_title {
+    font-size: 30px;
+  }
+  .form_title_more {
+    font-size: 20px;
+  }
+  .services .title_services {
+    font-size: 44px;
+  }
+  .about_company .info_first .info_first_text p {
+    font-size: 18px;
+  }
+  .about_company .wrapper {
+    max-width: 600px;
+  }
+  .footer .wrapper .copyright {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    .wrapper {
+      height: 70px;
+      .header__logo {
+        width: 50px;
+        height: 60px;
+        img {
+          height: 60px;
+        }
+      }
+    }
+  }
+  .header .wrapper .header_time {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #fbf8f8;
+  }
+  .wrapper {
+    max-width: 400px;
+  }
+  .main_slider {
+    margin-top: 20px;
+    .container {
+      margin: 0 auto;
+      width: 1000px;
+      max-width: 300px;
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      .slide-content {
+        font-size: 15px;
+        color: white;
+      }
+    }
+  }
+  .about_company .info_first {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 30px;
+  }
+  .about_company .info_first .info_first_text {
+    order: 1;
+  }
+  .footer .wrapper .copyright {
+    font-size: 14px;
+  }
+}

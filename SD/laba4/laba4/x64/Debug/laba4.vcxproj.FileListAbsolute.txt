@@ -1,0 +1,5 @@
+E:\IT\belstu\sd\1sem\laba4\laba4\x64\Debug\laba4.exe
+F:\SOFT\Work\belstu\sd\1sem\laba4\laba4\x64\Debug\laba4.exe
+F:\SOFT\Work\belstu\sd\1sem\laba4\laba4\x64\Debug\laba4.pdb
+D:\SOFT\Work\belstu\sd\1sem\laba4\laba4\x64\Debug\laba4.exe
+C:\BSTU\1 kurs\1 kurs 2 sem\Структуры данных\laba4\laba4\x64\Debug\laba4.exe

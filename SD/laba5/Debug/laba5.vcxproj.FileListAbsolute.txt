@@ -1,0 +1,3 @@
+F:\SOFT\Work\belstu\sd\1sem\laba5\Debug\laba5.exe
+F:\SOFT\Work\belstu\sd\1sem\laba5\Debug\laba5.pdb
+C:\BSTU\1 kurs\1 kurs 2 sem\Структуры данных\laba5\Debug\laba5.exe

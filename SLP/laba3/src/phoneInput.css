@@ -1,0 +1,17 @@
+li {
+  list-style: none;
+  display: inlineBlock;
+  margin-left: -40px;
+}
+li:hover {
+  background: rgb(235, 233, 233);
+}
+input[type="radio"] {
+  display: none;
+}
+ul {
+  border: 1px solid;
+  width: 152px;
+  margin-top: 3px;
+}
+

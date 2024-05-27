@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://files.porsche.com/images/mobil/icon/porsche_72.png"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/Car.css" />
+    <title>Сar</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="burger">
+          <div class="container_burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+        <div class="header__logo">
+          <a href="../index.html">
+            <img src="../IMG/porsche 1.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="header__nav">
+          <nav class="nav_header">
+            <ul>
+              <li><a href="../index.html">Главная</a></li>
+              <li><a href="../HTML/Cars.html">Авто</a></li>
+              <li><a href="../HTML/Service.html">Сервис</a></li>
+              <li>
+                <a href="../HTML/Contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header_time">
+          <p class="time">14:32</p>
+          <p class="day">12 апреля</p>
+        </div>
+      </div>
+    </header>
+    <main class="all_info">
+      <div class="wrapper">
+        <div class="img_car">
+  
+        </div>
+        <h1 class="modal_title">Название машины: <span class="modal_car"></span></h1>
+      
+        <div class="description">
+          <p>
+            Описание: <span class="characteristic"></span>
+          </p>
+          <p>Мощность: <span class="power"></span></p>
+          <p>Макс. скорость: <span class="speed"></span></p>
+          <p>
+            Разгон 0-100 км/ч: <span class="overclocking"></span>
+          </p>
+          <p>
+            Количество цилиндров :<span class="cylinders"></span>
+          </p>
+        </div>
+        <h1 class="price">Цена:<span class="price_number"> </span>$</h1>
+      </div>
+    </main>
+    <a href="../HTML/Contacts.html" class="btn_link"
+      >Связаться с консультантом</a
+    >
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="copyright">© 2022 Porsche AG. Все права защищены.</div>
+        <div class="contacts_imgs">
+          <a
+            href="https://ru.telegram-store.com/catalog/channels/porscheenthusiast"
+          >
+            <img src="../IMG/telegram.svg" alt="telegram"
+          /></a>
+          <a href="https://www.instagram.com/porsche/"
+            ><img src="../IMG/instagram.svg" alt="instagram"
+          /></a>
+          <a href="https://www.facebook.com/porsche/">
+            <img src="../IMG/facebook.svg" alt="facebook"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../JS/Cars.js"></script>
+    <script src="../JS/main.js"></script>
+    <script>
+      var params = new URLSearchParams(document.location.search); 
+      var i = params.get("id"); 
+      document.querySelector(".modal_car").innerHTML = CARS[i].modal; 
+      document.querySelector(
+        ".img_car"
+      ).innerHTML = `<img src="${CARS[i].img}">`; 
+      document.querySelector(".characteristic").innerHTML =
+        CARS[i].characteristic; 
+      document.querySelector(".power").innerHTML = CARS[i].power; 
+      document.querySelector(".speed").innerHTML = CARS[i].speed; 
+      document.querySelector(".overclocking").innerHTML = CARS[i].overclocking; 
+      document.querySelector(".cylinders").innerHTML = CARS[i].cylinders; 
+      document.querySelector(".price_number").innerHTML = CARS[i].price_number; 
+      document.title = CARS[i].modal; 
+    </script>
+  </body>
+</html>

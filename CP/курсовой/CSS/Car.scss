@@ -1,0 +1,333 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("Fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Smythe";
+  src: url("Fonts/Smythe/Smythe-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #341f1f;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header {
+  background: black;
+  .wrapper {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo {
+      img {
+        height: 80px;
+      }
+    }
+    .burger {
+      display: none;
+      .container_burger {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
+    .header_time {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+
+      text-align: center;
+      color: #fbf8f8;
+    }
+    .header__nav {
+      .nav_header {
+        ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .active_pages {
+            padding-bottom: 8px;
+            border-bottom: 4px solid #a34b4b;
+          }
+          li {
+            cursor: pointer;
+
+            padding: 10px 20px;
+            &:hover {
+              background-color: #a34b4b;
+            }
+            a {
+              padding: 10px 20px;
+              font-family: "Smythe";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 20px;
+              height: 100%;
+              line-height: 37px;
+              text-align: center;
+              color: #fbf8f8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.btn_link {
+  display: table;
+  margin: 30px auto;
+
+  padding: 12px 23px;
+  background: #f24747;
+  border-radius: 40px;
+}
+.all_info {
+  margin-top: 40px;
+
+  .wrapper {
+    .price {
+      margin-top: 20px;
+      margin-left: 30px;
+      font-weight: 400;
+      color: #fff1f1;
+    }
+    h2 {
+      font-family: "Smythe";
+      font-style: normal;
+      color: #fff1f1;
+      font-size: 25px;
+      margin-bottom: 10px;
+      span {
+        color: #fbf8f8;
+      }
+    }
+    .modal_title {
+      font-weight: 600;
+      font-size: 35px;
+      text-align: center;
+      color: white;
+    }
+    .description {
+      p {
+        padding: 10px 0;
+        color: #c7bebe;
+        font-size: 18px;
+        span {
+          color: gray;
+        }
+      }
+    }
+    .img_car {
+      max-width: 1000px;
+      margin: 0 auto;
+      height: 500px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.footer {
+  margin-top: 50px;
+  background-color: black;
+  .wrapper {
+    .contacts_imgs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .copyright {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #fbf8f8;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1034px) {
+  .wrapper {
+    max-width: 800px;
+  }
+  .header .wrapper .header__nav .nav_header ul li a {
+    font-size: 24px;
+  }
+  .header .wrapper .header_time {
+    font-size: 24px;
+  }
+}
+@media (max-width: 790px) {
+  .all_info .wrapper h2 {
+    font-size: 20px;
+  }
+  .description {
+    p {
+      font-size: 16px;
+    }
+  }
+  .all_info .wrapper .img_car {
+    height: 300px;
+  }
+  .all_info {
+    .wrapper {
+      .price {
+        font-size: 25px;
+        margin-left: 0px;
+      }
+    }
+  }
+  .wrapper {
+    max-width: 650px;
+  }
+  .header {
+    .wrapper {
+      height: 100px;
+      .header__logo {
+        height: 90px;
+        img {
+          width: 90px;
+        }
+      }
+      .burger {
+        display: block;
+        z-index: 100;
+      }
+    }
+
+    position: relative;
+    .header__nav {
+      transform: translateX(-100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 10;
+      background-color: black;
+      transition: 0.5s;
+      &.active {
+        transform: translateX(-0%);
+      }
+      .nav_header {
+        ul {
+          margin-top: 90px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          .active_pages {
+            border: 3px solid #a34b4b;
+          }
+          li {
+            padding: 10px 20px;
+            a {
+              width: 100%;
+
+              font-family: "Smythe";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 32px;
+              line-height: 37px;
+              text-align: center;
+              color: #fbf8f8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form_title_more {
+    font-size: 20px;
+  }
+
+  .footer .wrapper .copyright {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    .wrapper {
+      height: 70px;
+      .header__logo {
+        width: 50px;
+        height: 60px;
+        img {
+          height: 60px;
+        }
+      }
+    }
+  }
+  .header .wrapper .header_time {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #fbf8f8;
+  }
+  .wrapper {
+    max-width: 400px;
+  }
+  .footer .wrapper .copyright {
+    font-size: 14px;
+  }
+}

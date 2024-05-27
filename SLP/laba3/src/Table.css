@@ -1,0 +1,11 @@
+td {
+    padding: 10px 20px;
+    border: 1px double;
+  }
+
+  table {
+    position: relative;
+    right: 13%;
+    border: 2px double;
+    margin: 100px;
+  }
